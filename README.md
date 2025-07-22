@@ -1,90 +1,37 @@
-🛡️ RAT Project - Remote Administration Tool
-⚠️ Warning: This project is intended for educational purposes only. Unauthorized access to computer systems is illegal and unethical. Please use responsibly.
+# RAT Project - Remote Administration Tool
 
-📖 Overview
-This project develops a sophisticated Remote Administration Tool (RAT) designed for learning about cybersecurity, network communication, and system control. It comprises three core components:
+**Warning: This project is for educational purposes only. Unauthorized access to computer systems is illegal.**
 
-Node.js Command and Control (C2) Server: The central hub for managing connected devices.
+## Overview
+A Remote Administration Tool (RAT) with:
+- Node.js command and control server
+- Android client agent
+- Telegram-based control interface
 
-Android Client Agent: A stealthy agent deployed on target Android devices.
+## Features
+- Secure WebSocket communication with AES-256 encryption
+- Remote command execution
+- Device management
+- File transfer capabilities
+- Stealth operation
+- Auto-start on device boot
 
-Telegram-based Control Interface: A convenient and secure way to interact with the RAT from anywhere.
+## Server Setup
+1. Create Telegram bot with [BotFather](https://t.me/botfather)
+2. Copy your bot token and chat ID
+3. Generate encryption key: `npm run keygen` in server directory
+4. Create `.env` file based on `.env.example`
+5. Install dependencies: `npm install`
+6. Start server: `npm start`
 
-✨ Features
-The RAT project boasts a robust set of features engineered for secure and efficient remote administration:
+## Android Client Setup
+1. Open project in Android Studio
+2. Update WebSocket URL in `MainService.kt`
+3. Build and install on device: `./scripts/build-apk.sh`
 
-🔒 Secure WebSocket Communication: All communications between the client and server are encrypted using AES-256, ensuring data confidentiality and integrity.
+## Deployment
+- Server: Use `scripts/deploy.sh` for DigitalOcean
+- Client: Use `scripts/build-apk.sh` to build APK
 
-💻 Remote Command Execution: Execute commands on the remote Android device directly from the C2 server.
-
-📱 Device Management: Gain control over various aspects of the connected Android device.
-
-📂 File Transfer Capabilities: Seamlessly upload and download files to and from the remote device.
-
-👻 Stealth Operation: Designed to operate discreetly on the target device.
-
-🚀 Auto-start on Device Boot: The client agent automatically starts when the Android device boots up, ensuring persistent access.
-
-⚙️ Server Setup
-Getting your C2 server up and running is straightforward:
-
-🤖 Create Telegram Bot:
-
-Initiate a conversation with @BotFather on Telegram.
-
-Follow the instructions to create a new bot and obtain your unique Bot Token.
-
-Find your Chat ID (you can send a message to your new bot and then use a service like https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates to find your chat ID).
-
-🔑 Generate Encryption Key:
-
-Navigate to the server directory.
-
-Run the command: npm run keygen to generate a strong AES-256 encryption key.
-
-📝 Configure Environment Variables:
-
-Create a .env file in the server directory.
-
-Populate it based on the .env.example file, inserting your Telegram Bot Token, Chat ID, and the generated encryption key.
-
-📦 Install Dependencies:
-
-In the server directory, execute: npm install
-
-▶️ Start Server:
-
-Launch the server with: npm start
-
-🤖 Android Client Setup
-Prepare the Android client agent for deployment:
-
-💻 Open in Android Studio:
-
-Open the Android client project in Android Studio.
-
-🌐 Update WebSocket URL:
-
-Locate the MainService.kt file.
-
-Update the WebSocket URL within this file to point to your Node.js C2 server's address.
-
-🛠️ Build and Install:
-
-Execute the build script: ./scripts/build-apk.sh
-
-Install the generated APK on your target Android device.
-
-🚀 Deployment
-Streamline the deployment process for both server and client:
-
-Server Deployment:
-
-Utilize the provided script for automated deployment to DigitalOcean: scripts/deploy.sh
-
-Client Deployment:
-
-Use the build script to generate the installable APK: scripts/build-apk.sh
-
-⚖️ Legal Notice
-This software is provided strictly for educational and research purposes. The developer assumes no responsibility for any misuse, damage, or illegal activities resulting from the use of this tool. Always ensure you have explicit, proper authorization before deploying or testing this software on any system or device.
+## Legal Notice
+This software is provided for educational purposes only. The developer is not responsible for any misuse of this tool. Always obtain proper authorization before testing on any systems.
