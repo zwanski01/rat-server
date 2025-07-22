@@ -1,0 +1,19 @@
+# Server
+server/node_modules/
+server/files/
+server/.env
+
+# Android
+client/.gradle/
+client/.idea/
+client/build/
+client/app/build/
+client/local.properties
+client/*.iml
+
+# General
+.DS_Store
+*.log
+thumbs.db
+*.apk
+*.aab
